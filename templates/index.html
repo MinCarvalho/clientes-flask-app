@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Cliente</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/add">Cadastrar Cliente</a>
+        
+    </nav>
+  <h1>Clientes</h1>
+  <div class="container">
+    <div class="row">
+        <div class="colu">
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Email</th>
+                        <th>Ações</th>
+                    </tr>   
+                </thead>
+                <tbody>
+                    {% for i in cliente %}
+                    <tr>
+                        <td>{{i.nome}}</td>
+                        <td>{{i.cpf}}</td>
+                        <td>{{i.email}}</td>
+                        <td>
+                            <a class="button-edit" href="/edit/{{i.id}}">Editar</a> 
+                            <a class="button-delete" href="/delete/{{i.id}}">Excluir</a>
+                        </td>
+                    </tr>
+
+                    {% endfor %}
+                </tbody>
+
+            </table>
+
+           
+            
+
+        </div>
+
+    </div>
+
+  </div>
+</body>
+</html>

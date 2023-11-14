@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>add</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/add">Cadastrar Cliente</a>
+        
+    </nav>
+    <h1>Cadastrar Cliente</h1>
+
+    <div class="container">
+        <form action="/add" method="post">
+
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" placeholder="Nome">
+
+            <label for="cpf">CPF:</label>
+            <input type="text" name="cpf" id="cpf" placeholder="CPF">
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="E-mail">
+            <br> <br>
+            <div class="add-container">
+                <button class="button" type="submit">Enviar</button>
+            </div>
+        </form>
+        
+       
+        
+    </div>
+   
+</body>
+</html>
