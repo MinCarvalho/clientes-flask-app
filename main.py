@@ -17,7 +17,6 @@ class Cliente(database.Model):
         self.cpf = cpf
         self.email = email
 
-# Crie o banco de dados
 with app.app_context():
     database.create_all()
 
